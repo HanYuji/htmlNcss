@@ -1,0 +1,54 @@
+<!--
+* form 태그의 속성
+action : 정보를 받을 주소. 서버쪽 주소
+method : 정보를 보내는 방식. get, post 방식. default는 get방식.
+  - get : 도메인 뒤에 정보를 붙여서 보내는 것.
+  - post : 정보가 암호화 되어 정보를 보내는 것. 도에인에 붙이지 않음.
+
+* input 태그의 속성
+type : text - 일반 문자,
+       password - 대체문자로 표시됨,
+       email,
+       file - 파일 선택할 수 있도록 함,
+       radio - n개 중 하나 선택. 이름(name)은 같아야 하고, value가 달라야함.
+       checkbox - n개 중 n개 선택 가능. name은 같고, value는 다르게 지정.
+        checked - 초기값이 체크되어있도록 함. ex) checked="checked"
+
+       submit : 정보를 서버로 전달.
+
+       등
+name : 이 정보의 이름
+size : 문자가 들어갈 수 있는 폭 지정.
+
+* textarea 태그의 속성 : 많은 글을 적을 떄 사용.
+rows - 행 지정
+cols - 열 지정
+
+* select 태그의 속성 : 드롭다운 형식으로 나래비
+multiple : 복수선택할 때 사용. ex) multiple="multiple"
+
+* option 태그 : 선택가능한 옵션 목록
+ -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form action="" method="get">
+      이름 : <input type="text" name="uname">
+      비밀번호 : <input type="password" name="upw">
+
+      <select>
+        <option>김치</option>
+        <option>불고기</option>
+        <option>비빔밥</option>
+        <option>파전</option>
+      </select>
+
+      <input type="submit">
+    </form>
+  </body>
+</html>
