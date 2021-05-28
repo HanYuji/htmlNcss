@@ -1,8 +1,8 @@
 <!--
 * form 태그의 속성
-action : 정보를 받을 주소. 서버쪽 주소
+action : 정보를 받을 주소. 서버쪽 주소.
 method : 정보를 보내는 방식. get, post 방식. default는 get방식.
-  - get : 도메인 뒤에 정보를 붙여서 보내는 것.
+  - get : 도메인 뒤에 정보를 붙여서 보내는 것. 보안에 취약함.
   - post : 정보가 암호화 되어 정보를 보내는 것. 도에인에 붙이지 않음.
 
 * input 태그의 속성
@@ -12,17 +12,17 @@ type : text - 일반 문자,
        file - 파일 선택할 수 있도록 함,
        radio - n개 중 하나 선택. 이름(name)은 같아야 하고, value가 달라야함.
        checkbox - n개 중 n개 선택 가능. name은 같고, value는 다르게 지정.
-        checked - 초기값이 체크되어있도록 함. ex) checked="checked"
+        - checked - 초기값이 체크되어있도록 함. ex) checked="checked"
 
-       submit : 정보를 서버로 전달.
+       submit : 정보를 서버로 전달. action에 지정한 주소로 전달함.
 
        등
 name : 이 정보의 이름
 size : 문자가 들어갈 수 있는 폭 지정.
 
 * textarea 태그의 속성 : 많은 글을 적을 떄 사용.
-rows - 행 지정
-cols - 열 지정
+rows - 행 지정, 줄.
+cols - 열 지정, 칸.
 
 * select 태그의 속성 : 드롭다운 형식으로 나래비
 multiple : 복수선택할 때 사용. ex) multiple="multiple"
@@ -36,19 +36,39 @@ multiple : 복수선택할 때 사용. ex) multiple="multiple"
     <meta charset="utf-8">
     <title></title>
   </head>
+
   <body>
     <form action="" method="get">
-      이름 : <input type="text" name="uname">
-      비밀번호 : <input type="password" name="upw">
+      이름 : <input type="text" name="uname"> <br>
+      비밀번호 : <input type="password" name="upw"> <br>
+      연락처 : <input type="text" name="uphone1" size="5"> -
+              <input type="text" name="uphone2" size="5"> -
+              <input type="text" name="uphone3" size="5">
+      사진 : <input type="file" name="upic" value=""> <br>
+      성별 구분 : <input type="radio" name="gender" value="m"> 남
+                 <input type="radio" name="gender" value="w"> 여 <br>
+      사용 언어 : <input type="checkbox" name="lan" value="kor" checked="checked"> 한국어
+                  <input type="checkbox" name="lan" value="eng"> 영어
+                  <input type="checkbox" name="lan" value="chi"> 중국어
+                  <input type="checkbox" name="lan" value="jap"> 일본어 <br>
+      자기 소개 : <textarea name="name" rows="8" cols="80">간단하게 적어보세요.</textarea> <br>
+      국적 : <select class="" name="">
+              <option value="">KOREA</option>
+              <option value="">USA</option>
+              <option value="">CHINA</option>
+              <option value="">JAPAN</option>
+            </select> <br>
 
-      <select>
-        <option>김치</option>
-        <option>불고기</option>
-        <option>비빔밥</option>
-        <option>파전</option>
-      </select>
+      좋아하는 음식 : <select multiple="multiple">
+                        <option>김치</option>
+                        <option>불고기</option>
+                        <option>비빔밥</option>
+                        <option>파전</option>
+                      </select> <br>
 
       <input type="submit">
+
     </form>
+
   </body>
 </html>
