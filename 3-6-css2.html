@@ -1,0 +1,29 @@
+<!--
+box-sizing : border가 사이즈 안에 적용됨. 전체 크기가 정해지도록 함.
+box-sizing을 하지 않으면 border는 원래 크기의 바깥으로 적용됨.
+15분
+-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <style>
+      * { margin : 0; padding : 0; }
+      div { width :100px; height:100px; }
+      div nth-child(1) {
+        background-color : red;
+      }
+      div nth-child(2) {
+        background-color : green;
+        border : 5px solid #cccccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div>content</div>
+    <div>content</div>
+  </body>
+</html>
