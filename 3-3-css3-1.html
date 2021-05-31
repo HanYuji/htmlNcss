@@ -1,0 +1,73 @@
+<!--
+구조 선택자 : 구조에 따라 속성적용.
+-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <style>
+        #content {
+          width : 300px;
+        }
+
+        ul li {
+          list-style : none; /* 기본속성으로 dot표시되는 걸 없앰.*/
+          border : 1px solid #cccccc;
+          padding : 10px;
+          background-color : #efefef;
+          font-weight : bold;
+          font-size:20px;
+        }
+
+        ul li a {
+          color : #000000;
+        }
+
+        /*구조선택자 적용*/
+        /* nth-child 함수 */
+        /* 홀짝에 따라 속성 적용 */
+        ul li:nth-child(2n+1) {
+          background-color : orange;
+        }
+
+        ul li:first-child, ul li:last-child {
+          background-color : yellow;
+        }
+
+        /* 방법1 : 자손으로 찾기 */
+        ul li:first-child {
+          border-radius : 10px 10px 0 0; /*좌상, 우상, 우하, 좌하 시계방향 */
+        }
+
+        ul li:last-child {
+          border-radius : 0 0 10px 10px;
+        }
+
+        /* 방법2 : 타입으로 찾기 */
+        /* ul li:first-of-type {
+          border-radius : 10px 10px 0 0; /*좌상, 우상, 우하, 좌하 시계방향 */
+        }
+
+        ul li:last-of-type {
+          border-radius : 0 0 10px 10px;
+        } */
+
+    </style>
+
+  </head>
+  <body>
+    <div id="content">
+      <ul>
+        <li><a href="#">menu1</a></li>
+        <li><a href="#">menu2</a></li>
+        <li><a href="#">menu3</a></li>
+        <li><a href="#">menu4</a></li>
+        <li><a href="#">menu5</a></li>
+      </ul>
+
+    </div>
+  </body>
+</html>
