@@ -1,0 +1,213 @@
+<!--
+스마트폰 레이아웃1
+모바일의 경우 viewport를 명시해야함.
+viewport : 웹 브라우서의 HTML문서에 특정한 정보를 나타내기 위한 태그로 meta 태그가 있다.
+모바일 웹브라우저에서는 브라우저의 화면 설정과 관련된 정보를 제공하기 위한 방법 뷰포트 meta 태그를 사용한다.
+
+뷰포트 속성들
+width : 화면의 너비
+height : 화면의 높이
+initial-scale : 초기 확대 비율
+user-scalable : 확대 및 축소 가능 여부
+minimum-scale : 최소 비율
+maximum-scale : 최대 비율
+
+모바일은 호스팅해서 확인해야 정확함. pc에서 크롬, ie로 봐서는 부정확함.
+강사님은 zpat.info 을 이용함(무료호스팅 사이트)
+-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no"  >
+    <title></title>
+
+    <style>
+      * { margin :0; padding:0;  }
+      body { font-family :'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+      li { list-style :none; }
+      a { text-decoration :none; }
+
+      #main_header {
+        height : 45px;
+        /* 1px 짜리 이미지가 쭉 반복돼서 나열된 것. */
+        background:url('img/bg_header.png');
+        position:relative;
+        text-align:center;
+        line-height:45px;
+      }
+
+      #main_header > h1 {
+        color :#ffffff;
+      }
+
+      #main_header > a, #main_header label {
+        display : block;
+        height:32px;
+        position : absolute;
+      }
+
+      #main_header > a.left {
+        width : 80px; left:10px; top:7px;
+      }
+
+      #main_header > a.right {
+        width : 64px; right:10px; top:7px;
+      }
+
+      #toggle { display : none; }
+
+      /* 최초 오픈 시 내용이 안 보이도록 설정 */
+      #grb_wrap { display :none; border : 10px solid #333333; }
+
+      /* toggle이 선택되었을 때(상태선택자) #wrap > #gnb_wrap 이 block으로 보이도록 설정 */
+      #toggle:checked ~ #wrap > #gnb_wrap { display : block; }
+
+      #gnb ul { background-color : #ffffff; overflow:hidden; }
+      #gnb ul li {
+        float :left;
+        margin : 10px 20px;
+        padding:0; padding-right:40px;
+        text-align:center;
+        font-size:1.1em;
+        border:1px solid #cccccc;
+        box-sizing : border-box;
+      }
+
+      #lnb { height : 60px; background-color : #137163; }
+      #lnb ul { overflow :hidden; }
+      #lnb ul li {
+        float : left;
+        width:20%;
+        height:60px;
+        line-height:60px;
+        color:#ffffff;
+        font-weight:bold;
+        font-size:1.2em;
+        text-align:center;
+        border:1px solid #cccccc;
+        box-sizing:border-box;
+      }
+
+      #lnb ul li a { color:#ffffff; }
+
+
+      #section { padding:10px; color:#303030; }
+      #section_body p:nth-child(1) {
+        color : #3da4e8;
+        font-weight:bold;
+        font-size:1.1em;
+        padding : 10px 0;
+      }
+
+      #section_body p:nth-child(1) {
+        color : #3da4e8;
+        font-weight:bold;
+        font-size:1.1em;
+        padding : 10px 0;
+      }
+
+      #section_body p:nth-child(2) {
+        background-image :url('img/visual14.jpg')
+        background-repeat :no-repeat;
+        background-position-x:-600px;
+      }
+
+
+      #footer { padding :10px; }
+
+      #footer .logo {
+        border-top : 1px solid #5e5e5e;
+        border-bottom : 1px solid #5e5e5e;
+        padding : 10px 0;
+        text-align:center;
+      }
+
+      #footer .info {
+        padding-top : 10px;
+        font-size:1.3em;
+        font-weight: bold;
+      }
+
+      #footer .addr {
+        text-align :center;
+        color : #515151;
+        font-size : .9em;
+      }
+
+
+
+    </style>
+  </head>
+  <body>
+    <input id="toggle" type="checkbox">
+    <div id="wrap">
+      <header id="main_header">
+        <a href="#none" class="left"><img src="img/category.png" alt="category"></a>
+        <h1>Mobile</h1>
+        <!-- for: XX : input 태그의 id가 XX인 것을 위한 태그라는 의미.
+        onclick 속성 : click 여부 판단
+       -->
+        <label class="right" for="toggle" onclick=""><img src="img/menu.png" alt="menu"></label>
+      </header>
+
+      <div id="gnb_wrap">
+        <div id="gnb">
+          <ul>
+            <li><a href="#none">gnb1</a></li>
+            <li><a href="#none">gnb2</a></li>
+            <li><a href="#none">gnb3</a></li>
+            <li><a href="#none">gnb4</a></li>
+            <li><a href="#none">gnb5</a></li>
+            <li><a href="#none">gnb6</a></li>
+            <li><a href="#none">gnb7</a></li>
+            <li><a href="#none">gnb8</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="lnb_wrap">
+        <li><a href="#none">lnb1</a></li>
+        <li><a href="#none">lnb2</a></li>
+        <li><a href="#none">lnb3</a></li>
+        <li><a href="#none">lnb4</a></li>
+        <li><a href="#none">lnb5</a></li>
+      </div>
+
+      <div id="section">
+        <div id="section_header">
+          <h1>하이서울브랜드</h1>
+          <hr>
+        </div>
+
+        <div id="section_body">
+          <p>
+            section_body부분입니다.<br>
+            section_body부분입니다.<br>
+          </p>
+
+          <p>
+            내용내용내용내용내용
+            내용내용내용내용내용
+            내용내용내용내용내용
+            내용내용내용내용내용
+            내용내용내용내용내용
+            내용내용내용내용내용
+            내용내용내용내용내용
+            내용내용내용내용내용
+            내용내용내용내용내용
+            내용내용내용내용내용
+          </p>
+        </div>
+      </div>
+
+      <footer id="footer">
+        <div class="logo"><img src="img/logo.png" alt="LOGO">LOGO_LOGO</div>
+        <div class="info">INFORMATION_information</div>
+        <div class="addr">서울시 XX구 XX동</div>
+      </footer>
+    </div>
+
+  </body>
+</html>
