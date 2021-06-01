@@ -1,0 +1,100 @@
+<!--
+웹폰트 :
+인터넷만 연결되어 있다면, 다양한 폰트를 웹사이트 방문자에게 제공할 수 잇도록 고안된 폰트.
+웹사이트를 방문하는 순간, 웹폰트를 다운받아 웹사이트를 구성한다.
+
+예제) google.com/fonts 접속 → 원하는 폰트 클릭
+→ select this style 클릭 → 링크부분 copy.
+
+-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- link로 폰트 지정하는 방법
+    1. head 태그 내에 복사한 link 태그 붙여넣기.
+    2. 사용하고자 하는 태그에 font-family: '폰트이름'; 이렇게 지정하기.
+    -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- Dancing Script 하나만 지정한 경우 -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet"> -->
+    <!-- Dancing Script, India Flower 두 개 지정한 경우 -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Indie+Flower&display=swap" rel="stylesheet"> -->
+    <!-- Dancing Script, India Flower, Abril Fatface 세 개 지정한 경우 -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Indie+Flower&family=Abril+Fatface&display=swap" rel="stylesheet">
+
+    <!-- @import로 폰트 지정하는 방법 -->
+
+    <style>
+
+      * { margin: 0; padding:0; }
+      a { text-decoration: none;}
+      li { list-style: none; }
+
+      header { width:800px; margin: 0 auto; border: 1px solid #cccccc; }
+      header #gnb { border: 1px solid #cccccc; }
+      header #gnb ul { overflow:hidden; }
+      header #gnb ul li { float:left; }
+      header #gnb ul li a { padding:10px 20px; border: 1px solid #cccccc; font-family:'Dancing Script'; }
+
+      header #lnb { border: 1px solid #cccccc; margin-top: 30px;}
+      header #lnb ul { overflow:hidden; }
+      header #lnb ul li { float:right; }
+      header #lnb ul li a { padding:10px 20px; border: 1px dashed #cccccc; font-family:'Indie Flower'; }
+
+      #content { width:800px; margin: 0 auto; border: 1px solid #cccccc; overflow:hidden; }
+
+      #content #section {
+        width: 500px; border: 1px solid #cccccc;
+        float:left; height:400px; text-align:center;
+        font-family: 'Abril Fatface';
+      }
+
+      #content #aside {
+        width: 296px; border: 1px solid #cccccc;
+        float:right; height:400px; text-align:center;
+      }
+
+      footer { width:800px; margin: 0 auto; border: 1px solid #cccccc; }
+      footer #office { text-align:center; height:200px; line-height:200px; }
+
+
+    </style>
+
+  </head>
+  <body>
+    <header>
+      <div id="gnb">
+        <ul>
+          <li><a href="#none">gnb01</a></li>
+          <li><a href="#none">gnb02</a></li>
+          <li><a href="#none">gnb03</a></li>
+          <li><a href="#none">gnb04</a></li>
+          <li><a href="#none">gnb05</a></li>
+        </ul>
+      </div>
+
+      <div id="lnb">
+        <ul>
+          <li><a href="#none">lnb01</a></li>
+          <li><a href="#none">lnb02</a></li>
+          <li><a href="#none">lnb03</a></li>
+          <li><a href="#none">lnb04</a></li>
+          <li><a href="#none">lnb05</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div id="content">
+      <div id="section">section : Almost before we knew it, we had left the ground.</div>
+      <div id="aside">aside : Almost before we knew it, we had left the ground.</div>
+    </div>
+
+
+    <footer>
+      <div id="office">office information</div>
+    </footer>
+
+  </body>
+</html>
