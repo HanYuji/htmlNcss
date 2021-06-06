@@ -3,7 +3,6 @@
 모바일의 경우 viewport를 명시해야함.
 viewport : 웹 브라우서의 HTML문서에 특정한 정보를 나타내기 위한 태그로 meta 태그가 있다.
 모바일 웹브라우저에서는 브라우저의 화면 설정과 관련된 정보를 제공하기 위한 방법 뷰포트 meta 태그를 사용한다.
-
 뷰포트 속성들
 width : 화면의 너비
 height : 화면의 높이
@@ -11,7 +10,6 @@ initial-scale : 초기 확대 비율
 user-scalable : 확대 및 축소 가능 여부
 minimum-scale : 최소 비율
 maximum-scale : 최대 비율
-
 모바일은 호스팅해서 확인해야 정확함. pc에서 크롬, ie로 봐서는 부정확함.
 강사님은 zpat.info 을 이용함(무료호스팅 사이트)
 -->
@@ -52,7 +50,7 @@ maximum-scale : 최대 비율
         width : 80px; left:10px; top:7px;
       }
 
-      #main_header > a.right {
+      #main_header > label.right {
         width : 64px; right:10px; top:7px;
       }
 
@@ -94,12 +92,6 @@ maximum-scale : 최대 비율
 
 
       #section { padding:10px; color:#303030; }
-      #section_body p:nth-child(1) {
-        color : #3da4e8;
-        font-weight:bold;
-        font-size:1.1em;
-        padding : 10px 0;
-      }
 
       #section_body p:nth-child(1) {
         color : #3da4e8;
@@ -114,7 +106,6 @@ maximum-scale : 최대 비율
         background-position-x:-600px;
       }
 
-
       #footer { padding :10px; }
 
       #footer .logo {
@@ -128,6 +119,7 @@ maximum-scale : 최대 비율
         padding-top : 10px;
         font-size:1.3em;
         font-weight: bold;
+        text-align:center;
       }
 
       #footer .addr {
@@ -135,7 +127,6 @@ maximum-scale : 최대 비율
         color : #515151;
         font-size : .9em;
       }
-
 
 
     </style>

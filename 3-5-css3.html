@@ -4,4 +4,86 @@ display : 화면에 어떻게 보이는지를 설정하는 속성.
 inline : 높이 속성이 적용되지 않음, 상하 마진 속성 적용X.
 inline-block : inline과 block의 속성을 모두 가지고 있음. 높이 속성이 적용됨.
 -->
-16분
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      body div:nth-child(1) {
+        width:100px; height:100px;
+        background-color:#ff0000; color:#ffffff;
+        font-weight:bold; text-align:center;
+      }
+
+      body div:nth-child(2) {
+        width:100px; height:100px;
+        background-color:#00ff00; color:#ffffff;
+        font-weight:bold; text-align:center;
+      }
+
+      body div:nth-child(3) {
+        width:100px; height:100px;
+        background-color:#0000ff; color:#ffffff;
+        font-weight:bold; text-align:center;
+      }
+
+      body div:nth-child(4) {
+        width:100px; height:100px;
+        background-color:#ff0000; color:#ffffff;
+        font-weight:bold; text-align:center;
+      }
+
+      body div:nth-child(5) {
+        width:100px; height:100px;
+        background-color:#00ff00; color:#ffffff;
+        font-weight:bold; text-align:center;
+        display:inline; margin:10px 10px 10px 10px; /* inline일 경우 상하에는 margin이 적용되지 않는다.*/
+      }
+
+      body div:nth-child(6) {
+        width:100px; height:100px;
+        background-color:#0000ff; color:#ffffff;
+        font-weight:bold; text-align:center;
+        display:inline;
+      }
+
+      body div:nth-child(7) {
+        width:100px; height:100px;
+        background-color:#ff0000; color:#ffffff;
+        font-weight:bold; text-align:center;
+        display:none; /* none 지정 시 화면에서 사라짐. 공간자체가 없어짐.*/
+      }
+
+      body div:nth-child(8) {
+        width:100px; height:100px;
+        background-color:#00ff00; color:#ffffff;
+        font-weight:bold; text-align:center;
+        display:inline;
+      }
+
+      body div:nth-child(9) {
+        width:100px; height:100px;
+        background-color:#0000ff; color:#ffffff;
+        font-weight:bold; text-align:center;
+        display:inline-block;
+      }
+
+
+    </style>
+
+
+  </head>
+  <body>
+    <div>content1</div>
+    <div>content2</div>
+    <div>content3</div>
+    <div>content4</div>
+    <div>content5</div>
+    <div>content6</div>
+    <div>content7</div>
+    <div>content8</div>
+    <div>content9</div>
+  </body>
+</html>

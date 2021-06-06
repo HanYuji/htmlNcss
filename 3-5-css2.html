@@ -1,1 +1,39 @@
-<!-- 10분대 -->
+<!--
+url() : background-img 속성의 속성값으로 사용된다. 괄호 안에는 배경이미지 경로가 들어간다.
+-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      #wrap {
+        width:800px;
+        height:500px;
+        margin:0 auto;
+        border:1px solid #cccccc;
+      }
+
+      #content {
+        width:80%;
+        height:100%;
+        margin:0 auto;
+        background-image:url('https://www.google.co.kr/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png')
+        font-size:2em;
+        color:#000000;
+        font-qeight:bold;
+        text-align:center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="content">
+        해당 이미지는 저작권 보호를 받습니다.
+      </div>
+
+    </div>
+
+  </body>
+</html>

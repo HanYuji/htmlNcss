@@ -4,29 +4,66 @@
     <meta charset="utf-8">
     <title></title>
     <style>
-      5분
+
+      #wrap #content1 p:nth-child(2n) {
+        background-color: #ffffdf;
+      }
+
+      #wrap #content2 p:nth-child(2n) {
+        background-color: #ffffdf;
+      }
+
+      #content1, #content2 {
+        width:600px; margin:0 auto;
+        padding:20px; border:1px solid #cccccc;
+        color:#333333; font-weight:bold;
+      }
+
+      #content1 p:nth-child(1) { font-size: 100%; }
+      #content1 p:nth-child(2) { font-size: 120%; }
+      #content1 p:nth-child(3) { font-size: 140%; }
+      #content1 p:nth-child(4) { font-size: 160%; }
+
+      #content1 p span {
+        display: block;
+        color:#087eff;
+        font-weight:normal;
+        font-size:50%;
+      }
+
+      #content2 p:nth-child(1) { font-size: 1.6em; }
+      #content2 p:nth-child(2) { font-size: 1.4em; }
+      #content2 p:nth-child(3) { font-size: 1.2em; }
+      #content2 p:nth-child(4) { font-size: 1.0em; }
+
+      #content2 p span {
+        display: block;
+        color:#087eff;
+        font-weight:normal;
+        font-size:16px;
+      }
     </style>
   </head>
   <body>
     <div id="wrap">
       <div id="content1">
-        <p>content</p>
-        <p>content</p>
-        <p>content</p>
-        <p>content</p>
-        <p>content</p>
-        <p>content</p>
-        <p>content</p>
+        <p>content1 <span>2021년 5월</span></p>
+        <p>content2 <span>2021년 5월</span></p>
+        <p>content3 <span>2021년 5월</span></p>
+        <p>content4 <span>2021년 5월</span></p>
+        <p>content5 <span>2021년 5월</span></p>
+        <p>content6 <span>2021년 5월</span></p>
+        <p>content7 <span>2021년 5월</span></p>
       </div>
 
       <div id="content2">
-        <p>content</p>
-        <p>content</p>
-        <p>content</p>
-        <p>content</p>
-        <p>content</p>
-        <p>content</p>
-        <p>content</p>
+        <p>content1</p>
+        <p>content2</p>
+        <p>content3</p>
+        <p>content4</p>
+        <p>content5</p>
+        <p>content6</p>
+        <p>content7</p>
       </div>
 
     </div>

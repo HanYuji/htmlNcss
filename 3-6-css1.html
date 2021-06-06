@@ -2,7 +2,6 @@
 margin : 정해진 구역에서 안으로 여백이 생김.
 padding : 정해진 구역에서 바깥으로 여백이 생김.
 -->
-<!-- 11강 5분, 9분 -->
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -11,11 +10,51 @@ padding : 정해진 구역에서 바깥으로 여백이 생김.
     <title></title>
 
     <style>
-      body { margin : 0; }
+      body { margin:0; color:#3e3e3e; }
 
       div {
-        width:200px; height:200px;
-        color : #fffff;
+          width:200px; height:200px; color:#ffffff;
+          font-weight:bold; text-align:center;
+      }
+
+      #content1 { background-color:red; }
+
+      #content2 {
+          background-color:green;
+          margin:10px 10px 10px 10px;
+      }
+
+      #content3 {
+          background-color:blue;
+          padding:10px 10px 10px 10px;
+      }
+
+       #content4 {
+          background-color:yellow;
+          margin:10px 10px 10px 10px;
+          padding:10px 10px 10px 10px;
+      }
+
+      #content {
+            width:810px;
+            margin:0 auto;
+            background-color:#cccccc;
+            overflow:hidden;
+        }
+
+      #content div {
+          width:250px;
+          float:left;
+          background-color:#ffffff;
+          margin:10px;
+          border-radius:10px;
+      }
+
+      ul li { list-style:none; }
+
+      p {
+          padding:0 20px;
+          font-size:1.5em;
       }
     </style>
   </head>
@@ -27,7 +66,7 @@ padding : 정해진 구역에서 바깥으로 여백이 생김.
 
     <div id="content">
       <div>
-        <p>공지사항</p>
+        <p>공지사항1</p>
         <ul>
           <li>게시판_01</li>
           <li>게시판_02</li>
@@ -35,8 +74,32 @@ padding : 정해진 구역에서 바깥으로 여백이 생김.
           <li>게시판_04</li>
           <li>게시판_05</li>
         </ul>
-
       </div>
+
+      <div>
+        <p>공지사항2</p>
+        <ul>
+          <li>게시판_01</li>
+          <li>게시판_02</li>
+          <li>게시판_03</li>
+          <li>게시판_04</li>
+          <li>게시판_05</li>
+        </ul>
+      </div>
+
+      <div>
+        <p>공지사항3</p>
+        <ul>
+          <li>게시판_01</li>
+          <li>게시판_02</li>
+          <li>게시판_03</li>
+          <li>게시판_04</li>
+          <li>게시판_05</li>
+        </ul>
+      </div>
+
+
+
     </div>
   </body>
 </html>
